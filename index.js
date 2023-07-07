@@ -11,6 +11,10 @@ document.getElementById("submit").addEventListener("click", async()=>{
         const newH2 = await document.createElement('h2')
         newH2.innerText = `You can never reach 100% attendance`
         document.body.appendChild(newH2)
+
+        document.getElementById("submit").addEventListener("click", async()=>{
+        window.location.reload();
+    })
     }
     else{
     p=parseFloat(p);
@@ -36,7 +40,7 @@ document.getElementById("submit").addEventListener("click", async()=>{
     newH4.innerText = `Current Attendance: ${cr}`
     document.body.appendChild(newH4)
     const newH2 = await document.createElement('h2')
-    newH2.innerText = `You need to attend ${s} more days to reach ${c}% attendance`
+    newH2.innerText = `You need to attend ${s} more days to reach ${c}% attendance!`
     document.body.appendChild(newH2)
     ai=0,day=1
     while(ai<atten.length){
