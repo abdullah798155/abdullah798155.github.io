@@ -1,6 +1,7 @@
 
    body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #8ec5fc, #f093fb, #f093fb);
   }
   
   h1 {
@@ -12,8 +13,10 @@
   }
   
   h4 {
-    color: rgb(219, 77, 66);
-    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5)
+    color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5);
+    background: linear-gradient(45deg, #ff420e, #f2571a);
   }
   h2{
     background: linear-gradient(45deg, #4a86e8, #50c4f5);
