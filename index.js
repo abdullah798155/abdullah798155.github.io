@@ -13,8 +13,8 @@ document.getElementById("submit").addEventListener("click", async()=>{
         document.body.appendChild(newH2)
 
         document.getElementById("submit").addEventListener("click", async()=>{
-        window.location.reload();
-    })
+            window.location.reload();
+        })
     }
     else{
     p=parseFloat(p);
@@ -37,16 +37,20 @@ document.getElementById("submit").addEventListener("click", async()=>{
     }
     
     const newH4 = await document.createElement('h4')
-    newH4.innerText = `Current Attendance: ${cr}`
+    newH4.innerText = `Current Attendance: ${cr}%`
     document.body.appendChild(newH4)
     const newH2 = await document.createElement('h2')
-    newH2.innerText = `You need to attend ${s} more days to reach ${c}% attendance!`
+    newH2.innerText = `You need to attend ${s} more days to reach ${c}% attendance`
     document.body.appendChild(newH2)
+    const newH3 = await document.createElement('h5')
+    newH3.innerText = `Day wise attendance info:`
+    document.body.appendChild(newH3)
     ai=0,day=1
     while(ai<atten.length){
 
         const newH3 = await document.createElement('h5')
-        newH3.innerText = `After ${day++} days: ${atten[ai]}%`
+        if(ai-1>=0) newH3.innerText = `After ${day++} days: ${atten[ai]}% [${(atten[ai]-atten[ai-1]).toFixed(2)}% increase]`
+        else newH3.innerText = `After ${day++} days: ${atten[ai]}%`
         document.body.appendChild(newH3)
         ai++
     }
