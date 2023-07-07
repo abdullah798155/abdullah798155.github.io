@@ -7,7 +7,7 @@ document.getElementById("submit").addEventListener("click", async()=>{
         alert("Please enter all the values")
         window.location.reload();
     }
-    else if(c===100){
+    else if(parseFloat(c)===100){
         const newH2 = await document.createElement('h2')
         newH2.innerText = `You can never reach 100% attendance`
         document.body.appendChild(newH2)
